@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace EnergyEndpointsConsoleApp.Views
 {
-    internal class StartView
+    internal class StartView : BaseView
     {
         public StartView()
         {
             Services = new List<string> {
-                "Endpoints"
+                "Endpoints",
             };
         }
 
         private List<string> Services { get; set; }
-        private EndpointView EndpointView { get; set; }
+        private EndpointView? EndpointView { get; set; }
 
         public void StartInterface()
         {
@@ -30,10 +30,23 @@ namespace EnergyEndpointsConsoleApp.Views
 
             Console.Clear();
 
-            bool consoleView = true;
-            while (consoleView)
+            while (ConsoleView)
             {
-                this.SelectOptions();
+                try
+                {
+                    this.SelectOptions();
+                }
+                catch (Exception e)
+                {
+                    ConsoleView = false;
+                    Console.WriteLine(e.Message);
+                    Thread.Sleep(5000);
+                }
+                finally
+                {
+                    if (ConsoleView == false)
+                        Console.WriteLine("System shutting down....");
+                }        
             }
         }
 
@@ -43,44 +56,39 @@ namespace EnergyEndpointsConsoleApp.Views
 
             for (int i = 0; i < Services.Count(); i++)
             {
-                Console.WriteLine(i + " - " + Services[i]);
+                int displayValue = i + 1;
+                Console.WriteLine(displayValue + " - " + Services[i]);
             }
 
-            int totalElements = Services.Count() + 1;
-            Console.WriteLine(totalElements + " - Exit");
+            int displayExit = Services.Count() + 1;
+            Console.WriteLine(displayExit + " - Exit");
 
-            try
+            var userResponse = Console.Read();
+
+            Console.Clear();
+
+            if (userResponse < 1 || userResponse > (Services.Count() + 1))
             {
-                var userResponse = Console.Read();
-
-                Console.Clear();
-
-                if (userResponse < 0 || userResponse > Services.Count() + 1)
-                {
-                    Console.Write("Invalid input\n\n\n\n");
-                    return;
-                }
-
-                switch (userResponse)
-                {
-                    case 1:
-
-                        this.EndpointView = new EndpointView();
-
-                        this.EndpointView.Start();
-
-                        break;
-                }
+                Console.Write("Invalid input\n\n\n\n");
+                return;
             }
-            catch (Exception e)
+
+            switch (userResponse)
             {
-                Console.WriteLine(e.Message);
-                Thread.Sleep(5000);
+                case 1:
+
+                    this.EndpointView = new EndpointView();
+                    this.EndpointView.Start();
+
+                    break;
+
+                default:
+
+                    ConsoleView = false;
+                    
+                    break;
             }
-            finally
-            {
-                Console.WriteLine("System shutting down....");
-            }
+            
         }
     }
 }
