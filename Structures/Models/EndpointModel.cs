@@ -1,6 +1,6 @@
 ﻿namespace Structures.Models
 {
-    public class EndpointModel
+    public class EndpointModel : BaseModel
     {
         public EndpointModel(string serialNumber, int modelId, int number, string firmwareVersion, int state)
         {

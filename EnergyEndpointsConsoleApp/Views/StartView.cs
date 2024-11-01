@@ -1,8 +1,14 @@
-﻿namespace EnergyEndpointsConsoleApp.Handlers
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EnergyEndpointsConsoleApp.Views
 {
-    public class InterfaceHandler
+    internal class StartView
     {
-        public InterfaceHandler()
+        public StartView()
         {
             Services = new List<string> {
                 "Endpoints"
@@ -10,6 +16,7 @@
         }
 
         private List<string> Services { get; set; }
+        private EndpointView EndpointView { get; set; }
 
         public void StartInterface()
         {
@@ -23,7 +30,16 @@
 
             Console.Clear();
 
-            Console.Write("Please select one of the options: \n\n");
+            bool consoleView = true;
+            while (consoleView)
+            {
+                this.SelectOptions();
+            }
+        }
+
+        public void SelectOptions()
+        {
+            Console.WriteLine("Please select one of the options: ");
 
             for (int i = 0; i < Services.Count(); i++)
             {
@@ -39,18 +55,19 @@
 
                 Console.Clear();
 
-                if (userResponse < 0 || userResponse > totalElements)
+                if (userResponse < 0 || userResponse > Services.Count() + 1)
                 {
-                    throw new ArgumentException("Invalid input");    
+                    Console.Write("Invalid input\n\n\n\n");
+                    return;
                 }
 
                 switch (userResponse)
                 {
                     case 1:
 
-                        EndpointHandler handler = new EndpointHandler();
+                        this.EndpointView = new EndpointView();
 
-                        handler.Start();
+                        this.EndpointView.Start();
 
                         break;
                 }
@@ -62,9 +79,8 @@
             }
             finally
             {
-                Console.WriteLine("System shutting down");
+                Console.WriteLine("System shutting down....");
             }
-            
         }
     }
 }
