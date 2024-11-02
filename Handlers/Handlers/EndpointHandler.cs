@@ -13,10 +13,13 @@ namespace EnergyEndpointsConsoleApp.Handlers
         {
             if (ItemList.Count > 0)
             {
-                var existItem = this.ItemList.First(i => i.SerialNumber == serialNumber);
-                if (existItem == null)
+                var existItem = this.ItemList.FirstOrDefault(i => i.SerialNumber == serialNumber);
+                if (existItem != null)
                     return Fail("Endpoint already exists");
             }
+
+            if (Enum.IsDefined(typeof(EndpointStateEnum), state) == false)
+                return Fail("State code " + state + " is not valid");
 
             EndpointModel newEndpoint = new EndpointModel(serialNumber, modelId, number, firmwareVersion, state);
             this.ItemList.Add(newEndpoint);
@@ -26,7 +29,7 @@ namespace EnergyEndpointsConsoleApp.Handlers
 
         public string UpdateEndpoint(string serialNumber, int state)
         {
-            var existItem = this.ItemList.First(i => i.SerialNumber == serialNumber);
+            var existItem = this.ItemList.FirstOrDefault(i => i.SerialNumber == serialNumber);
             if (existItem == null)
                 return Fail("Endpoint not found");
 
@@ -40,7 +43,7 @@ namespace EnergyEndpointsConsoleApp.Handlers
 
         public string DeleteEndpoint(string serialNumber)
         {
-            var existItem = this.ItemList.First(i => i.SerialNumber == serialNumber);
+            var existItem = this.ItemList.FirstOrDefault(i => i.SerialNumber == serialNumber);
             if (existItem == null)
                 return Fail("Endpoint not found");
 
@@ -51,11 +54,11 @@ namespace EnergyEndpointsConsoleApp.Handlers
 
         public (EndpointModel?, bool, string) FindEndpoint(string serialNumber)
         {
-            var existItem = this.ItemList.First(i => i.SerialNumber == serialNumber);
+            var existItem = this.ItemList.FirstOrDefault(i => i.SerialNumber == serialNumber);
             if (existItem == null)
                 return (existItem, false, Fail("Endpoint not found"));
 
-            return (existItem, true, Success());
+            return (existItem, true, "Item found");
         }
     }
 }

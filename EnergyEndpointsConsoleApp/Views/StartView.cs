@@ -76,7 +76,9 @@ namespace EnergyEndpointsConsoleApp.Views
             {
                 case 1:
 
-                    this.EndpointView = new EndpointView();
+                    if (this.EndpointView == null)
+                        this.EndpointView = new EndpointView();
+
                     this.EndpointView.Start();
 
                     break;

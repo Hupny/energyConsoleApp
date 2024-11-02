@@ -7,23 +7,22 @@ namespace EnergyEndpointsConsoleApp.Views
 {
     public class EndpointView : BaseItemView, IUserInterfaceItem<EndpointModel>
     {
-        public EndpointView(List<EndpointModel>? endpoints = null)
+        public EndpointView(List<EndpointModel>? endpoints = null) : base("endpoint", "endpoints", 7)
         {
             if (endpoints != null)
                 EndpointHandler = new EndpointHandler(endpoints);
             else
             {
-                EndpointHandler = new EndpointHandler();
+                //EndpointHandler = new EndpointHandler();
+                EndpointHandler = new EndpointHandler(MockedSystemData);
             }
-
-            Name = "endpoint";
-            PluralName = "endpoints";
         }
 
         private EndpointHandler EndpointHandler { get; set; }
 
         public void Start()
         {
+            this.ConsoleView = true;
             while (ConsoleView)
             {
                 try
@@ -48,7 +47,7 @@ namespace EnergyEndpointsConsoleApp.Views
             string? userResponse = Console.ReadLine() ?? throw new Exception("No input found");
 
             bool ok = int.TryParse(userResponse, out int optionSelected);
-            if (!ok || optionSelected < 1 || optionSelected > 6)
+            if (!ok || optionSelected < 1 || optionSelected > NumberOptions)
             {
                 InvalidInput();
                 return;
@@ -84,6 +83,10 @@ namespace EnergyEndpointsConsoleApp.Views
                     break;
                 case 6:
 
+                    Console.Clear();
+                    break;
+                case 7:
+
                     ConsoleView = false;
                     break;
             }
@@ -91,7 +94,7 @@ namespace EnergyEndpointsConsoleApp.Views
 
         public void CreateItem()
         {
-            
+
             Console.WriteLine("Input the endpoint serial number:");
             string? serialNumber = Console.ReadLine() ?? throw new Exception("No input found");
 
@@ -143,16 +146,20 @@ namespace EnergyEndpointsConsoleApp.Views
             Console.WriteLine("Do you really want to delete this endpoint?");
             Console.Write("type 'y' to confirm: ");
             char confirmation = Console.ReadKey().KeyChar;
+            Console.WriteLine();
             if (confirmation == 'y')
             {
                 response = EndpointHandler.DeleteEndpoint(serialNumber);
                 Console.WriteLine(response);
+            } else
+            {
+                Console.WriteLine("Cancelling deletion");
             }
         }
 
         public void ListItems()
         {
-            List<EndpointModel> endpointList = EndpointHandler.GetItemList(); 
+            List<EndpointModel> endpointList = EndpointHandler.GetItemList();
             if (endpointList.Count == 0)
             {
                 Console.WriteLine("There are no registered endpoints");
@@ -161,17 +168,17 @@ namespace EnergyEndpointsConsoleApp.Views
 
 
             Console.WriteLine(" * Serial number | Model Id | Number | Firmwawre Version | State ");
-            
+
             for (int i = 0; i < endpointList.Count(); i++)
             {
                 Console.WriteLine(" * " + endpointList[i].SerialNumber + " | " + endpointList[i].ModelId + " | " +
                     endpointList[i].Number + " | " + endpointList[i].FirmwareVersion + " | " +
-                    ((EndpointStateEnum)endpointList[i].State).ToString());
+                    (EndpointStateEnum)endpointList[i].State);
             }
 
             Console.WriteLine();
-            Console.Write("Press any key to leave");
-            Console.Read();
+            Console.Write("Press enter to return ");
+            Console.ReadLine();
         }
 
         public void UpdateItem()
@@ -179,7 +186,18 @@ namespace EnergyEndpointsConsoleApp.Views
             Console.WriteLine("Input the endpoint serial number:");
             string? serialNumber = Console.ReadLine() ?? throw new Exception("No input found");
 
-            Console.WriteLine("Input the endpoint state (using the code):");
+            (EndpointModel? endpoint, bool ok, string response) = EndpointHandler.FindEndpoint(serialNumber);
+            if (!ok || endpoint == null)
+            {
+                Console.WriteLine(response);
+                return;
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Endpoint " + endpoint.SerialNumber + " is " + (EndpointStateEnum)endpoint.State);
+            Console.WriteLine();
+
+            Console.WriteLine("Input the endpoint new state (using the code):");
 
             IEnumerable<EndpointStateEnum> stateValues = Enum.GetValues(typeof(EndpointStateEnum)).Cast<EndpointStateEnum>();
             foreach (var stateValue in stateValues)
@@ -188,11 +206,11 @@ namespace EnergyEndpointsConsoleApp.Views
             }
 
             string? stateString = Console.ReadLine();
-            bool ok = int.TryParse(stateString, out int state);
+            ok = int.TryParse(stateString, out int state);
             if (!ok)
                 InvalidInput();
 
-            string response = EndpointHandler.UpdateEndpoint(serialNumber, state);
+            response = EndpointHandler.UpdateEndpoint(serialNumber, state);
             Console.WriteLine(response);
         }
 
@@ -214,13 +232,13 @@ namespace EnergyEndpointsConsoleApp.Views
             Console.WriteLine("Model Id        : " + endpoint.ModelId);
             Console.WriteLine("Number          : " + endpoint.Number);
             Console.WriteLine("Firmware version: " + endpoint.FirmwareVersion);
-            Console.WriteLine("State           : " + ((EndpointStateEnum)endpoint.State).ToString());
+            Console.WriteLine("State           : " + (EndpointStateEnum)endpoint.State);
             Console.WriteLine("Creation date   : " + endpoint.Creation);
             Console.WriteLine("Last modified   : " + lastModifiedString);
 
             Console.WriteLine();
-            Console.Write("Press any key to leave");
-            Console.Read();
+            Console.Write("Press enter to return ");
+            Console.ReadLine();
         }
 
         private void NoDataForOperation()
@@ -230,5 +248,14 @@ namespace EnergyEndpointsConsoleApp.Views
                 throw new Exception("There are no registered endpoints");
             }
         }
+
+        public List<EndpointModel> MockedSystemData = new List<EndpointModel>()
+        {
+            new EndpointModel("ser-321", 62, 18, "4.0.2", 1),
+            new EndpointModel("ser-123", 62, 19, "4.0.3", 2),
+            new EndpointModel("ser-111", 65, 20, "4.0.3", 0),
+            new EndpointModel("ser-222", 65, 21, "4.0.3", 0),
+            new EndpointModel("ser-333", 65, 23, "4.0.4", 1),
+        };
     }
 }
