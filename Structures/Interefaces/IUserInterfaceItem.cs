@@ -7,7 +7,7 @@
         void ListItems();
         void CreateItem();
         void UpdateItem();
-        void DeleteItem(string id);
-        void ShowItem(int index);
+        void DeleteItem();
+        void ShowItemDetails();
     }
 }

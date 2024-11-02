@@ -26,7 +26,7 @@ namespace EnergyEndpointsConsoleApp.Views
                 "------------------------------\n"
                 );
 
-            Thread.Sleep(3000);
+            Thread.Sleep(1000);
 
             Console.Clear();
 
@@ -38,9 +38,7 @@ namespace EnergyEndpointsConsoleApp.Views
                 }
                 catch (Exception e)
                 {
-                    ConsoleView = false;
                     Console.WriteLine(e.Message);
-                    Thread.Sleep(5000);
                 }
                 finally
                 {
@@ -54,26 +52,27 @@ namespace EnergyEndpointsConsoleApp.Views
         {
             Console.WriteLine("Please select one of the options: ");
 
-            for (int i = 0; i < Services.Count(); i++)
+            for (int i = 0; i < Services.Count; i++)
             {
                 int displayValue = i + 1;
                 Console.WriteLine(displayValue + " - " + Services[i]);
             }
 
-            int displayExit = Services.Count() + 1;
+            int displayExit = Services.Count + 1;
             Console.WriteLine(displayExit + " - Exit");
 
-            var userResponse = Console.Read();
+            string? userResponse = Console.ReadLine() ?? throw new Exception("No input found");
 
-            Console.Clear();
-
-            if (userResponse < 1 || userResponse > (Services.Count() + 1))
+            bool ok = int.TryParse(userResponse, out int optionSelected);
+            if (!ok || optionSelected < 1 || optionSelected > (Services.Count() + 1))
             {
-                Console.Write("Invalid input\n\n\n\n");
+                InvalidInput();
                 return;
             }
 
-            switch (userResponse)
+            Console.Clear();
+
+            switch (optionSelected)
             {
                 case 1:
 

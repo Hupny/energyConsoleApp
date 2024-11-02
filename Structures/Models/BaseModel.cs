@@ -8,9 +8,9 @@ namespace Structures.Models
 {
     public class BaseModel
     {
-        private Guid Id { get; set; }
-        private DateTime Creation {  get; set; }
-        protected DateTime LastModified { get; set; }
+        protected Guid Id { get; private set; }
+        public DateTime Creation {  get; private set; }
+        public DateTime LastModified { get; protected set; }
 
         public BaseModel()
         {
@@ -18,14 +18,5 @@ namespace Structures.Models
             Creation = DateTime.Now;
         }
 
-        public Guid GetId()
-        {
-            return Id;
-        }
-
-        public DateTime GetCreation()
-        {
-            return Creation;
-        }
     }
 }

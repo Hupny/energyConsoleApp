@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Handlers\Handlers.csproj" />
     <ProjectReference Include="..\Structures\Structures.csproj" />
   </ItemGroup>
 

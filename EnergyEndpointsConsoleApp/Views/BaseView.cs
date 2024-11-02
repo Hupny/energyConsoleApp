@@ -14,5 +14,10 @@ namespace EnergyEndpointsConsoleApp.Views
         }
 
         protected bool ConsoleView { get; set; }
+
+        protected void InvalidInput()
+        {
+            throw new Exception("Invalid input\n\n\n");
+        }
     }
 }

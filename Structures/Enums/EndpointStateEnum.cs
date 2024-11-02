@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace Structures.Enums
 {
-    enum EndpointStateEnum
+    public enum EndpointStateEnum
     {
-        Disconnected,
-        Connected,
-        Armed,
+        [Description("Disconnected")]
+        Disconnected = 0,
+        [Description("Connected")]
+        Connected = 1,
+        [Description("Armed")]
+        Armed = 2,
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Structures.Models
+﻿using Structures.Enums;
+
+namespace Structures.Models
 {
     public class EndpointModel : BaseModel
     {
@@ -12,11 +14,17 @@
             State = state;
         }
 
-        public string SerialNumber { get; set; }
-        public int ModelId { get; set; }
-        public int Number { get; set; }
-        public string FirmwareVersion { get; set; }
-        public int State { get; set; }
+        public string SerialNumber { get; private set; }
+        public int ModelId { get; private set; }
+        public int Number { get; private set; }
+        public string FirmwareVersion { get; private set; }
+        public int State { get; private set; }
+
+        public void UpdateEndpoint(int state)
+        {
+            State = state;
+            LastModified = DateTime.Now;
+        }
     }
 
 
