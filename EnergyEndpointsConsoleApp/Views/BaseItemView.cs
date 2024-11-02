@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EnergyEndpointsConsoleApp.Views
+﻿namespace EnergyEndpointsConsoleApp.Views
 {
     public class BaseItemView : BaseView
     {
@@ -33,6 +27,24 @@ namespace EnergyEndpointsConsoleApp.Views
             Console.WriteLine("5 - View " + Name + " details");
             Console.WriteLine("6 - Clear");
             Console.WriteLine("7 - Exit");
+        }
+
+        protected override void Exit()
+        {
+            Console.WriteLine("Do you really want exit this screen?");
+            Console.Write("type 'y' to confirm: ");
+            char confirmation = Console.ReadKey().KeyChar;
+            Console.WriteLine();
+            Console.Clear();
+            if (confirmation == 'y' || confirmation == 'Y')
+            {
+                ConsoleView = false;
+                Console.Clear();
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

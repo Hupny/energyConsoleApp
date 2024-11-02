@@ -402,3 +402,4 @@ FodyWeavers.xsd
 # Others
 *.vsidx
 *.v2
+*.testlog

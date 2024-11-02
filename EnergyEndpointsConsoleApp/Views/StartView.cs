@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EnergyEndpointsConsoleApp.Views
+﻿namespace EnergyEndpointsConsoleApp.Views
 {
     internal class StartView : BaseView
     {
@@ -64,7 +58,7 @@ namespace EnergyEndpointsConsoleApp.Views
             string? userResponse = Console.ReadLine() ?? throw new Exception("No input found");
 
             bool ok = int.TryParse(userResponse, out int optionSelected);
-            if (!ok || optionSelected < 1 || optionSelected > (Services.Count() + 1))
+            if (!ok || optionSelected < 1 || optionSelected > (Services.Count + 1))
             {
                 InvalidInput();
                 return;
@@ -85,8 +79,7 @@ namespace EnergyEndpointsConsoleApp.Views
 
                 default:
 
-                    ConsoleView = false;
-                    
+                    Exit();
                     break;
             }
             

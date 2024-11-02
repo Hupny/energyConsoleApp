@@ -1,7 +1,4 @@
-﻿using Structures.Models;
-using System.Net;
-
-namespace Handlers.Handlers
+﻿namespace Handlers.Handlers
 {
     public class BaseHandler<T>
     {

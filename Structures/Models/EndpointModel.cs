@@ -1,6 +1,4 @@
-﻿using Structures.Enums;
-
-namespace Structures.Models
+﻿namespace Structures.Models
 {
     public class EndpointModel : BaseModel
     {

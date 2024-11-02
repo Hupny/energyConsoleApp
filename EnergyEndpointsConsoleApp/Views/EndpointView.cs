@@ -1,7 +1,7 @@
-﻿using Structures.Interefaces;
-using Structures.Models;
+﻿using EnergyEndpointsConsoleApp.Handlers;
 using Structures.Enums;
-using EnergyEndpointsConsoleApp.Handlers;
+using Structures.Interefaces;
+using Structures.Models;
 
 namespace EnergyEndpointsConsoleApp.Views
 {
@@ -87,7 +87,7 @@ namespace EnergyEndpointsConsoleApp.Views
                     break;
                 case 7:
 
-                    ConsoleView = false;
+                    Exit();
                     break;
             }
         }
@@ -97,16 +97,12 @@ namespace EnergyEndpointsConsoleApp.Views
 
             Console.WriteLine("Input the endpoint serial number:");
             string? serialNumber = Console.ReadLine() ?? throw new Exception("No input found");
-
-            Console.WriteLine("Input the endpoint model Id:");
-            string? modelIdString = Console.ReadLine();
-            bool ok = int.TryParse(modelIdString, out int modelId);
-            if (!ok)
-                InvalidInput();
+            if (serialNumber == string.Empty)
+                EmptyInput();
 
             Console.WriteLine("Input the endpoint number:");
             string? numberString = Console.ReadLine();
-            ok = int.TryParse(numberString, out int number);
+            bool ok = int.TryParse(numberString, out int number);
             if (!ok)
                 InvalidInput();
 
@@ -127,7 +123,7 @@ namespace EnergyEndpointsConsoleApp.Views
             if (!ok)
                 InvalidInput();
 
-            string response = EndpointHandler.CreateEndpoint(serialNumber, modelId, number, firmwareVersion, state);
+            string response = EndpointHandler.CreateEndpoint(serialNumber, number, firmwareVersion, state);
             Console.WriteLine(response);
         }
 
@@ -135,6 +131,8 @@ namespace EnergyEndpointsConsoleApp.Views
         {
             Console.WriteLine("Input the endpoint serial number:");
             string? serialNumber = Console.ReadLine() ?? throw new Exception("No input found");
+            if (serialNumber == string.Empty)
+                EmptyInput();
 
             (_, bool ok, string response) = EndpointHandler.FindEndpoint(serialNumber);
             if (!ok)
@@ -185,6 +183,8 @@ namespace EnergyEndpointsConsoleApp.Views
         {
             Console.WriteLine("Input the endpoint serial number:");
             string? serialNumber = Console.ReadLine() ?? throw new Exception("No input found");
+            if (serialNumber == string.Empty)
+                EmptyInput();
 
             (EndpointModel? endpoint, bool ok, string response) = EndpointHandler.FindEndpoint(serialNumber);
             if (!ok || endpoint == null)
@@ -218,6 +218,8 @@ namespace EnergyEndpointsConsoleApp.Views
         {
             Console.WriteLine("Input the endpoint serial number:");
             string? serialNumber = Console.ReadLine() ?? throw new Exception("No input found");
+            if (serialNumber == string.Empty)
+                EmptyInput();
 
             (EndpointModel? endpoint, bool ok, string response) = EndpointHandler.FindEndpoint(serialNumber);
             if (!ok || endpoint == null)
@@ -251,11 +253,14 @@ namespace EnergyEndpointsConsoleApp.Views
 
         public List<EndpointModel> MockedSystemData = new List<EndpointModel>()
         {
-            new EndpointModel("ser-321", 62, 18, "4.0.2", 1),
-            new EndpointModel("ser-123", 62, 19, "4.0.3", 2),
-            new EndpointModel("ser-111", 65, 20, "4.0.3", 0),
-            new EndpointModel("ser-222", 65, 21, "4.0.3", 0),
-            new EndpointModel("ser-333", 65, 23, "4.0.4", 1),
+            new EndpointModel("NSX1P2W-123", 16, 11, "4.0.2", 1),
+            new EndpointModel("NSX1P2W-321", 16, 12, "4.0.2", 1),
+            new EndpointModel("NSX1P3W-123", 17, 13, "4.0.3", 1),
+            new EndpointModel("NSX1P3W-321", 17, 14, "4.0.2", 2),
+            new EndpointModel("NSX2P3W-111", 18, 15, "4.0.3", 0),
+            new EndpointModel("NSX2P3W-122", 18, 16, "4.0.3", 2),
+            new EndpointModel("NSX3P4W-222", 19, 17, "4.0.2", 1),
+            new EndpointModel("NSX3P4W-233", 19, 18, "4.0.3", 1),
         };
     }
 }

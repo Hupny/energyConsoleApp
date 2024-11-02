@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\EnergyEndpointsConsoleApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{90C802F5-33B2-4334-A41B-AF92D3BD4793}|EnergyEndpointsConsoleApp.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\energyendpointsconsoleapp\\views\\startview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90C802F5-33B2-4334-A41B-AF92D3BD4793}|EnergyEndpointsConsoleApp.csproj|solutionrelative:views\\startview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32258476-78E7-44D3-8A80-A581D4A325F1}|..\\Test\\Test.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\test\\validations\\endpointtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32258476-78E7-44D3-8A80-A581D4A325F1}|..\\Test\\Test.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\test\\validations\\endpointtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{90C802F5-33B2-4334-A41B-AF92D3BD4793}|EnergyEndpointsConsoleApp.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\energyendpointsconsoleapp\\views\\endpointview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90C802F5-33B2-4334-A41B-AF92D3BD4793}|EnergyEndpointsConsoleApp.csproj|solutionrelative:views\\endpointview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90C802F5-33B2-4334-A41B-AF92D3BD4793}|EnergyEndpointsConsoleApp.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\energyendpointsconsoleapp\\views\\baseitemview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90C802F5-33B2-4334-A41B-AF92D3BD4793}|EnergyEndpointsConsoleApp.csproj|solutionrelative:views\\baseitemview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{13F35421-CD32-4DFF-959F-FB0ED765361F}|..\\Handlers\\Handlers.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\handlers\\handlers\\endpointhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -16,28 +20,27 @@
       "AbsoluteMoniker": "D:0:0:{13F35421-CD32-4DFF-959F-FB0ED765361F}|..\\Handlers\\Handlers.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\handlers\\handlers\\basehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F2158B9-5782-4D1C-BDBB-B2F22E0C65A1}|..\\Structures\\Structures.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\structures\\models\\endpointmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90C802F5-33B2-4334-A41B-AF92D3BD4793}|EnergyEndpointsConsoleApp.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\energyendpointsconsoleapp\\views\\endpointview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90C802F5-33B2-4334-A41B-AF92D3BD4793}|EnergyEndpointsConsoleApp.csproj|solutionrelative:views\\endpointview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{90C802F5-33B2-4334-A41B-AF92D3BD4793}|EnergyEndpointsConsoleApp.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\energyendpointsconsoleapp\\views\\baseview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{90C802F5-33B2-4334-A41B-AF92D3BD4793}|EnergyEndpointsConsoleApp.csproj|solutionrelative:views\\baseview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90C802F5-33B2-4334-A41B-AF92D3BD4793}|EnergyEndpointsConsoleApp.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\energyendpointsconsoleapp\\views\\baseitemview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90C802F5-33B2-4334-A41B-AF92D3BD4793}|EnergyEndpointsConsoleApp.csproj|solutionrelative:views\\baseitemview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{90C802F5-33B2-4334-A41B-AF92D3BD4793}|EnergyEndpointsConsoleApp.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\energyendpointsconsoleapp\\views\\startview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90C802F5-33B2-4334-A41B-AF92D3BD4793}|EnergyEndpointsConsoleApp.csproj|solutionrelative:views\\startview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F2158B9-5782-4D1C-BDBB-B2F22E0C65A1}|..\\Structures\\Structures.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\structures\\interefaces\\iuserinterfaceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F2158B9-5782-4D1C-BDBB-B2F22E0C65A1}|..\\Structures\\Structures.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\structures\\enums\\endpointserialmodelenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F2158B9-5782-4D1C-BDBB-B2F22E0C65A1}|..\\Structures\\Structures.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\structures\\enums\\endpointstateenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F2158B9-5782-4D1C-BDBB-B2F22E0C65A1}|..\\Structures\\Structures.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\structures\\models\\basemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F2158B9-5782-4D1C-BDBB-B2F22E0C65A1}|..\\Structures\\Structures.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\structures\\enums\\endpointstateenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F2158B9-5782-4D1C-BDBB-B2F22E0C65A1}|..\\Structures\\Structures.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\structures\\models\\endpointmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F2158B9-5782-4D1C-BDBB-B2F22E0C65A1}|..\\Structures\\Structures.csproj|d:\\workspace\\workspacevscode\\energyconsoleapp\\energyconsoleapp\\structures\\interefaces\\iuserinterfaceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,19 +50,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EndpointTests.cs",
-              "DocumentMoniker": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Test\\Validations\\EndpointTests.cs",
-              "RelativeDocumentMoniker": "..\\Test\\Validations\\EndpointTests.cs",
-              "ToolTip": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Test\\Validations\\EndpointTests.cs",
-              "RelativeToolTip": "..\\Test\\Validations\\EndpointTests.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAIsAAAA5AAAA",
+              "DocumentIndex": 7,
+              "Title": "EndpointSerialModelEnum.cs",
+              "DocumentMoniker": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Structures\\Enums\\EndpointSerialModelEnum.cs",
+              "RelativeDocumentMoniker": "..\\Structures\\Enums\\EndpointSerialModelEnum.cs",
+              "ToolTip": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Structures\\Enums\\EndpointSerialModelEnum.cs",
+              "RelativeToolTip": "..\\Structures\\Enums\\EndpointSerialModelEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T17:08:26.233Z",
+              "WhenOpened": "2024-11-02T18:18:49.27Z",
               "EditorCaption": ""
             },
             {
@@ -70,124 +77,137 @@
               "RelativeDocumentMoniker": "..\\Structures\\Models\\BaseModel.cs",
               "ToolTip": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Structures\\Models\\BaseModel.cs",
               "RelativeToolTip": "..\\Structures\\Models\\BaseModel.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAADgvwwAAAA2AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-02T02:01:58.469Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "EndpointStateEnum.cs",
               "DocumentMoniker": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Structures\\Enums\\EndpointStateEnum.cs",
               "RelativeDocumentMoniker": "..\\Structures\\Enums\\EndpointStateEnum.cs",
               "ToolTip": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Structures\\Enums\\EndpointStateEnum.cs",
               "RelativeToolTip": "..\\Structures\\Enums\\EndpointStateEnum.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T22:49:50.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BaseItemView.cs",
-              "DocumentMoniker": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\EnergyEndpointsConsoleApp\\Views\\BaseItemView.cs",
-              "RelativeDocumentMoniker": "Views\\BaseItemView.cs",
-              "ToolTip": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\EnergyEndpointsConsoleApp\\Views\\BaseItemView.cs",
-              "RelativeToolTip": "Views\\BaseItemView.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAqwA4AAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T22:31:43.17Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "BaseView.cs",
               "DocumentMoniker": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\EnergyEndpointsConsoleApp\\Views\\BaseView.cs",
               "RelativeDocumentMoniker": "Views\\BaseView.cs",
               "ToolTip": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\EnergyEndpointsConsoleApp\\Views\\BaseView.cs",
               "RelativeToolTip": "Views\\BaseView.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAxAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAASwBMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T22:28:23.203Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "StartView.cs",
               "DocumentMoniker": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\EnergyEndpointsConsoleApp\\Views\\StartView.cs",
               "RelativeDocumentMoniker": "Views\\StartView.cs",
               "ToolTip": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\EnergyEndpointsConsoleApp\\Views\\StartView.cs",
               "RelativeToolTip": "Views\\StartView.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAwwE4AAAAUAAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAcwEAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T00:48:52.068Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EndpointModel.cs",
-              "DocumentMoniker": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Structures\\Models\\EndpointModel.cs",
-              "RelativeDocumentMoniker": "..\\Structures\\Models\\EndpointModel.cs",
-              "ToolTip": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Structures\\Models\\EndpointModel.cs",
-              "RelativeToolTip": "..\\Structures\\Models\\EndpointModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T00:53:39.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EndpointHandler.cs",
               "DocumentMoniker": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Handlers\\Handlers\\EndpointHandler.cs",
               "RelativeDocumentMoniker": "..\\Handlers\\Handlers\\EndpointHandler.cs",
               "ToolTip": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Handlers\\Handlers\\EndpointHandler.cs",
               "RelativeToolTip": "..\\Handlers\\Handlers\\EndpointHandler.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAMwCEAAAAvAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAqwBgAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T00:47:01.062Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "BaseHandler.cs",
               "DocumentMoniker": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Handlers\\Handlers\\BaseHandler.cs",
               "RelativeDocumentMoniker": "..\\Handlers\\Handlers\\BaseHandler.cs",
               "ToolTip": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Handlers\\Handlers\\BaseHandler.cs",
               "RelativeToolTip": "..\\Handlers\\Handlers\\BaseHandler.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAApwB0AAAArAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBoAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T22:59:21.77Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "EndpointTests.cs",
+              "DocumentMoniker": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Test\\Validations\\EndpointTests.cs",
+              "RelativeDocumentMoniker": "..\\Test\\Validations\\EndpointTests.cs",
+              "ToolTip": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Test\\Validations\\EndpointTests.cs",
+              "RelativeToolTip": "..\\Test\\Validations\\EndpointTests.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAmwE4AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T17:08:26.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseItemView.cs",
+              "DocumentMoniker": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\EnergyEndpointsConsoleApp\\Views\\BaseItemView.cs",
+              "RelativeDocumentMoniker": "Views\\BaseItemView.cs",
+              "ToolTip": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\EnergyEndpointsConsoleApp\\Views\\BaseItemView.cs",
+              "RelativeToolTip": "Views\\BaseItemView.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwAQAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T22:31:43.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "EndpointView.cs",
               "DocumentMoniker": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\EnergyEndpointsConsoleApp\\Views\\EndpointView.cs",
               "RelativeDocumentMoniker": "Views\\EndpointView.cs",
               "ToolTip": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\EnergyEndpointsConsoleApp\\Views\\EndpointView.cs",
               "RelativeToolTip": "Views\\EndpointView.cs",
-              "ViewState": "AQIAAM4AAAAAAAAAAAAAwAABAAA9AAAA",
+              "ViewState": "AQIAAKEAAAAAAAAAAADwv90AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T00:49:42.167Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
+              "Title": "EndpointModel.cs",
+              "DocumentMoniker": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Structures\\Models\\EndpointModel.cs",
+              "RelativeDocumentMoniker": "..\\Structures\\Models\\EndpointModel.cs",
+              "ToolTip": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Structures\\Models\\EndpointModel.cs",
+              "RelativeToolTip": "..\\Structures\\Models\\EndpointModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T00:53:39.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "IUserInterfaceItem.cs",
               "DocumentMoniker": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Structures\\Interefaces\\IUserInterfaceItem.cs",
               "RelativeDocumentMoniker": "..\\Structures\\Interefaces\\IUserInterfaceItem.cs",
               "ToolTip": "D:\\Workspace\\WorkspaceVSCode\\EnergyConsoleApp\\energyConsoleApp\\Structures\\Interefaces\\IUserInterfaceItem.cs",
               "RelativeToolTip": "..\\Structures\\Interefaces\\IUserInterfaceItem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAaAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T01:36:26.455Z",
               "EditorCaption": ""
